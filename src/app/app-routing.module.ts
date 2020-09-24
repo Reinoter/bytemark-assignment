@@ -1,10 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+/* Project Sites */
+import {
+    NewsListComponent
+} from '@site';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: NewsListComponent
+  }
+
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes, {
+    initialNavigation: 'enabled'
+})],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
