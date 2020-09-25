@@ -17,11 +17,10 @@ export class NewsService {
 
   /* Returns observable based on ISO code*/
   getNews(code){
-    var allow_git_host_proxy = "https://cors-anywhere.herokuapp.com/";
     var api_uri = "https://newsapi.org/v2"
 
 
-    this.http.get<any>(`${allow_git_host_proxy}${api_uri}/top-headlines?country=${code}`)
+    this.http.get<any>(`${api_uri}/top-headlines?country=${code}`)
       .subscribe((result) => {
         this.news = result;
         if(this.selected_article){

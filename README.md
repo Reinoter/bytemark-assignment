@@ -2,6 +2,9 @@
 Assignment created for Bytemark INC.
 
 ## Application comments
+- With the personal API key from **https://newsapi.org** this application only works on localhost since the start of 2020.
+
+
 - There are some functionality started that there was no time to complete.
     - Notification Component for error handling
     - Pagination for results.
@@ -19,9 +22,6 @@ Assignment created for Bytemark INC.
 - Folder structure:
   - **[app/compoents/site](./src/app/components/site)** is used by the router
   - **[app/compoents/insert](./src/app/components/insert)** is page elements
-
-## View
-**https://reinoter.github.io/bytemark-assignment**
 
 ## Install development environment
 1. Install `NodeJS`
