@@ -2,7 +2,12 @@
 Assignment created for Bytemark INC.
 
 ## Application comments
-- Given the size of the application I chose to use insertable components in the main view to display requested information. Normally I would create a different "route" for Articles. This seemed unnatural in this case, because one can't fetch single article data from the provided API. 
+- There are some functionality started that there was no time to complete.
+    - Notification Component for error handling
+    - Search field for country
+    - Pagination for results. 
+
+- Given the size of the application I chose to use insertable components in the main view to display requested information. Normally I would create a different "route" for Articles. This seemed unnatural in this case, because one can't fetch single article data from the provided API.
 
 
 - Icons used are from Google Material **https://google.github.io/material-design-icons/**
