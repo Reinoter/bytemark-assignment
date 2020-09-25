@@ -4,10 +4,10 @@ Assignment created for Bytemark INC.
 ## Application comments
 - There are some functionality started that there was no time to complete.
     - Notification Component for error handling
-    - Search field for country
-    - Pagination for results. 
+    - Pagination for results.
 
-- Given the size of the application I chose to use insertable components in the main view to display requested information. Normally I would create a different "route" for Articles. This seemed unnatural in this case, because one can't fetch single article data from the provided API.
+
+- The article route seems unnatural in this case, because one can't fetch single article data from the provided API. We'll share the selected article in a shared service to compensate for this.
 
 
 - Icons used are from Google Material **https://google.github.io/material-design-icons/**
@@ -19,6 +19,9 @@ Assignment created for Bytemark INC.
 - Folder structure:
   - **[app/compoents/site](./src/app/components/site)** is used by the router
   - **[app/compoents/insert](./src/app/components/insert)** is page elements
+
+## View
+**https://reinoter.github.io/bytemark-assignment**
 
 ## Install development environment
 1. Install `NodeJS`

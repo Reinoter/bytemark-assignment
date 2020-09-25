@@ -16,7 +16,6 @@ export class HeaderComponent implements OnInit {
 
 
   getNews(){
-    console.log("loool", this.code);
     clearTimeout(this.get_timeout);
     this.get_timeout = setTimeout(() => {
       if(this.code && this.code != "") this.newsService.getNews(this.code);

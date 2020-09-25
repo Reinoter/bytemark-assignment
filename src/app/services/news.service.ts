@@ -20,15 +20,10 @@ export class NewsService {
     var allow_git_host_proxy = "https://cors-anywhere.herokuapp.com/";
     var api_uri = "https://newsapi.org/v2"
 
-    console.log("getting news by code ", code);
-
 
     this.http.get<any>(`${allow_git_host_proxy}${api_uri}/top-headlines?country=${code}`)
       .subscribe((result) => {
         this.news = result;
-
-        console.log("got results ", this.news);
-
         if(this.selected_article){
           this.router.navigate(['/']);
           this.selected_article = undefined;

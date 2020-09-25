@@ -26,7 +26,6 @@ export class NewsListComponent implements OnInit {
   }
 
   resetPosition(){
-    console.log("RESETING POSITION", this.newsService.scroll_position);
     setTimeout(() => {
       if(this.newsService.scroll_position) window.scrollTo(0, this.newsService.scroll_position);
       this.newsService.scroll_position = undefined;
