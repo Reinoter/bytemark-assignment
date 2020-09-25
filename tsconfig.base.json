@@ -6,7 +6,7 @@
         "@services": ["src/app/services"],
         "@animations": ["src/app/animations"],
         "@site": ["src/app/components/site"],
-        "@inserts": ["src/app/components/insert"]
+        "@insert": ["src/app/components/insert"]
     },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",

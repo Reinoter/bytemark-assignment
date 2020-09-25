@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Project spesific importss
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { AppComponent } from './app.component';
-import { NewsService, NotifService } from '@services'
+import { NewsService, NotifService } from '@services';
 
 @NgModule({
   declarations: [

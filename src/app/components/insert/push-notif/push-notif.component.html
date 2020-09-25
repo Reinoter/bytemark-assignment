@@ -1,4 +1,4 @@
-<div class="notif-wrapper" *ngIf="notif.renderNotifs() > 0" @fade>
+<div class="notif-wrapper" *ngIf="notif.renderNotifs() > 0">
     <div class="notif" *ngFor="let not of notif._notifications">
         <div class="notif-inner" @slideUp *ngIf="not._render" (click)="notif.remove(not)" [ngClass]="(not._type == 'Error')?'error':''">
             {{not._value}}
