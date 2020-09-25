@@ -4,30 +4,23 @@ import { CommonModule } from '@angular/common';
 
 /* Project Sites */
 import {
-    NewsListComponent
+    NewsListComponent,
+    ArticleComponent
 } from '@site';
 
-/* Project Inserts */
-import {
-    NewsItemComponent,
-    NotifComponent,
-    ArticleComponent
-} from '@insert';
 
 const routes: Routes = [
   {
     path: '',
     component: NewsListComponent
+  },
+  {
+    path: 'article',
+    component: ArticleComponent
   }
 ];
 
 @NgModule({
-    declarations: [
-      NewsListComponent,
-      NewsItemComponent,
-      ArticleComponent,
-      NotifComponent
-    ],
     imports: [CommonModule, RouterModule.forRoot(routes, {
     initialNavigation: 'enabled'
 })],

@@ -1,0 +1,13 @@
+<div class="flex justify-center items-center w-full h-48 bg-gray-800">
+    <div class="flex flex-col items-center justify-center h-full lg:w-2/6 w-full mx-8">
+        <div class="text-3xl font-bold w-full text-center text-white m-4">
+            Bytemark Assignment
+        </div>
+        <div class="relative w-full bg-white w-full h-12 rounded-lg">
+            <span class="flex absolute z-0 items-center h-full pr-3 right-0 material-icons font-bold text-gray-600">
+                search
+            </span>
+            <input type="text" [(ngModel)]="code" (keyup)="getNews();" placeholder="Default: IN (India)" class="absolute font-bold placeholder-gray-600 z-2 w-full h-full bg-transparent p-3"/>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="w-full h-full lg:w-3/6 md:rounded-lg lg:rounded-lg shadow-xl bg-white overflow-hidden lg:mx-auto lg:mt-10 lg:mb-10" *ngIf="newsService.selected_article">
+    <img class="w-full object-cover" [src]="newsService.selected_article.urlToImage?newsService.selected_article.urlToImage:'assets/news-placeholder.png'" (onerror)="newsService.selected_article.urlToImage = 'assets/news-placeholder.png'"/>
+
+    <div class="m-2">
+        <h4 class="font-bold">{{newsService.selected_article.title}}</h4>
+        <h2 class="mb-4">{{newsService.selected_article.description}}</h2>
+        <h4 class="font-bold">Published at: {{formatDate(newsService.selected_article.publishedAt)}}</h4>
+        <h4 class="font-bold">{{newsService.selected_article.source?.name}}</h4>
+        <h4 class="font-bold" *ngIf="newsService.selected_article.author">Author: {{newsService.selected_article.author}}</h4>
+        <a [href]="newsService.selected_article.url">
+            <div class="truncate">
+                {{newsService.selected_article.url}}
+            </div>
+        </a>
+    </div>
+</div>

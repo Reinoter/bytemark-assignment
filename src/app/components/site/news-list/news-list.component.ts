@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService, NotifService } from '@services';
+import { Router } from '@angular/router';
 import { fade } from '@animations';
 
 @Component({
@@ -10,34 +11,31 @@ import { fade } from '@animations';
 })
 export class NewsListComponent implements OnInit {
   news:any;
-  selected_article:any;
-  scroll_position:number;
 
   constructor(
-    private newsService:NewsService,
-    private notif:NotifService
+    public newsService:NewsService,
+    private notif:NotifService,
+    private router:Router
   ) { }
 
   // Initialize news item list every time page is loaded.
-  ngOnInit(): void {
-    this.newsService.getNews('IN').subscribe((result) => {
-      this.news = result;
-    }, (err) => {
-      this.notif.add("Error", err);
-    })
-  }
+  ngOnInit(): void {}
 
   closeArticle(){
-      this.selected_article = undefined;
+      this.newsService.selected_article = undefined;
   }
 
   resetPosition(){
-      if(this.scroll_position) window.scrollTo(0, this.scroll_position);
-      this.scroll_position = undefined;
+    console.log("RESETING POSITION", this.newsService.scroll_position);
+    setTimeout(() => {
+      if(this.newsService.scroll_position) window.scrollTo(0, this.newsService.scroll_position);
+      this.newsService.scroll_position = undefined;
+    }, 50);
   }
 
   selectArticle(article){
-      this.scroll_position = window.pageYOffset;
-      this.selected_article = article;
+      this.newsService.scroll_position = window.pageYOffset;
+      this.newsService.selected_article = article;
+      this.router.navigate(['article']);
   }
 }

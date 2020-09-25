@@ -1,6 +1,6 @@
-<li class="transform cursor-pointer lg:hover:scale-105 duration-300 w-full h-full md:rounded-lg lg:rounded-lg shadow-xl bg-white overflow-hidden">
+<li class="transform cursor-pointer lg:hover:scale-105 duration-300 w-full h-full md:rounded-lg lg:rounded-lg shadow-xl bg-white overflow-hidden opacity-0" [ngClass]="article.loaded?'transform opacity-100':''">
     <div class="container h-56">
-        <img class="w-full h-full object-cover" [src]="article.urlToImage?article.urlToImage:'assets/news-placeholder.png'" (onerror)="article.urlToImage = 'assets/news-placeholder.png'"/>
+        <img class="w-full h-full object-cover" (load)="article.loaded = true;" [src]="article.urlToImage?article.urlToImage:'assets/news-placeholder.png'" (onerror)="article.urlToImage = 'assets/news-placeholder.png'"/>
     </div>
     <h4 class="m-2 font-bold">{{article.title}}</h4>
 </li>
