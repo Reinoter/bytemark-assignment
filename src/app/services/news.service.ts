@@ -13,6 +13,8 @@ export class NewsService {
 
   /* Returns observable based on ISO code*/
   getNews(code){
-    return this.http.get<any>(`https://newsapi.org/v2/top-headlines?country=${code}`)
+    var allow_git_host_proxy = "https://cors-anywhere.herokuapp.com/";
+    var api_uri = "https://newsapi.org/v2"
+    return this.http.get<any>(`${allow_git_host_proxy}${api_uri}/top-headlines?country=${code}`);
   }
 }
